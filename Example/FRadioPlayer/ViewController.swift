@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var infoContainer: UIView!
     @IBOutlet weak var artworkImageView: UIImageView!
     @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var volumeSliderOutlet: UISlider!
     
     // Singleton ref to player
     let player: FRadioPlayer = FRadioPlayer.shared
@@ -66,14 +67,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "FRadioPlayer"
+        title = "MAAD 97.5 FM"
         player.radioURL = URL(string: "http://streaming.broadcastradio.com:8870/maad975fm")
 
         // Set the delegate for the radio player
         player.delegate = self
         
         // Show current player state
-        //statusLabel.text = player.state.description
+        statusLabel.text = player.state.description
         
         //tableView.tableFooterView = UIView()
         //infoContainer.isHidden = true
@@ -81,10 +82,18 @@ class ViewController: UIViewController {
         setupRemoteTransportControls()
     }
     
+    @IBAction func volumeSlider(_ sender: UISlider) {
+        player.volume = volumeSliderOutlet.value
+        
+    }
+    
+    
     @IBAction func playTap(_ sender: Any) {
        
-        player.radioURL = URL(string: "http://streaming.broadcastradio.com:8870/maad975fm")
+        
         player.togglePlaying()
+        
+    
     }
     
     @IBAction func stopTap(_ sender: Any) {
@@ -118,7 +127,7 @@ class ViewController: UIViewController {
 extension ViewController: FRadioPlayerDelegate {
 
     func radioPlayer(_ player: FRadioPlayer, playerStateDidChange state: FRadioPlayerState) {
-        //statusLabel.text = state.description
+        statusLabel.text = state.description
     }
     
     func radioPlayer(_ player: FRadioPlayer, playbackStateDidChange state: FRadioPlaybackState) {
