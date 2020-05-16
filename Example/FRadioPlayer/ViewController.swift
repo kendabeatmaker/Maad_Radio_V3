@@ -67,7 +67,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "FRadioPlayer"
-        
+        player.radioURL = URL(string: "http://streaming.broadcastradio.com:8870/maad975fm")
+
         // Set the delegate for the radio player
         player.delegate = self
         
@@ -81,6 +82,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func playTap(_ sender: Any) {
+       
         player.radioURL = URL(string: "http://streaming.broadcastradio.com:8870/maad975fm")
         player.togglePlaying()
     }

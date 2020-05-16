@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nowPlayingBG" translatesAutoresizingMaskIntoConstraints="NO" id="acy-3Q-3N9">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nowPlayingBG-1" translatesAutoresizingMaskIntoConstraints="NO" id="acy-3Q-3N9">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                             </imageView>
@@ -104,7 +104,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="nowPlayingBG" width="375" height="812"/>
+        <image name="nowPlayingBG-1" width="375" height="812"/>
         <image name="pause" width="34" height="34"/>
         <image name="play" width="34" height="34"/>
     </resources>
