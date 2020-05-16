@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t6p-XF-zv8">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -13,53 +13,72 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FRadioPlayer_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xmg-gj-fZq">
-                                <rect key="frame" x="137.5" y="553" width="100" height="50"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nowPlayingBG" translatesAutoresizingMaskIntoConstraints="NO" id="acy-3Q-3N9">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="29h-Er-PU1">
+                                <rect key="frame" x="20" y="562" width="374" height="212"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tc0-4c-7Pk">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xmg-gj-fZq">
+                                        <rect key="frame" x="152" y="71" width="70" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tc0-4c-7Pk">
+                                                <rect key="frame" x="0.0" y="18" width="70" height="34"/>
+                                                <state key="normal" image="play"/>
+                                                <state key="selected" image="pause"/>
+                                                <connections>
+                                                    <action selector="playTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FsT-a6-CQl"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="hsg-S4-ie6"/>
-                                            <constraint firstAttribute="width" constant="50" id="xgd-d4-OZi"/>
+                                            <constraint firstAttribute="height" constant="70" id="tqL-er-n2V"/>
+                                            <constraint firstAttribute="width" constant="70" id="vms-Ok-dQZ"/>
                                         </constraints>
-                                        <state key="normal" image="play"/>
-                                        <state key="selected" image="pause"/>
-                                        <connections>
-                                            <action selector="playTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FsT-a6-CQl"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8w3-a4-Lpa">
-                                        <rect key="frame" x="50" y="0.0" width="50" height="50"/>
+                                    </stackView>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="T5s-AK-ZU1">
+                                        <rect key="frame" x="85" y="5" width="204" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="e9d-rd-39U"/>
-                                            <constraint firstAttribute="height" constant="50" id="sD3-6j-xb5"/>
+                                            <constraint firstAttribute="height" constant="29" id="B0z-Bu-AkK"/>
+                                            <constraint firstAttribute="width" constant="200" id="nNE-8S-d54"/>
                                         </constraints>
-                                        <state key="normal" image="stop"/>
-                                        <connections>
-                                            <action selector="stopTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oja-Rn-hiz"/>
-                                        </connections>
-                                    </button>
+                                    </slider>
                                 </subviews>
-                            </stackView>
+                                <constraints>
+                                    <constraint firstItem="T5s-AK-ZU1" firstAttribute="centerX" secondItem="29h-Er-PU1" secondAttribute="centerX" id="0NS-Vc-6EQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="T5s-AK-ZU1" secondAttribute="bottom" constant="178" id="DZW-tE-RqB"/>
+                                    <constraint firstItem="T5s-AK-ZU1" firstAttribute="top" secondItem="29h-Er-PU1" secondAttribute="top" constant="5" id="Fmg-ZF-MvI"/>
+                                    <constraint firstItem="xmg-gj-fZq" firstAttribute="centerY" secondItem="29h-Er-PU1" secondAttribute="centerY" id="dcm-xX-g6k"/>
+                                    <constraint firstItem="xmg-gj-fZq" firstAttribute="centerX" secondItem="29h-Er-PU1" secondAttribute="centerX" id="nkd-vn-8eA"/>
+                                    <constraint firstItem="T5s-AK-ZU1" firstAttribute="leading" secondItem="29h-Er-PU1" secondAttribute="leading" constant="87" id="oWp-i3-Z31"/>
+                                    <constraint firstAttribute="trailing" secondItem="T5s-AK-ZU1" secondAttribute="trailing" constant="87" id="ubr-A3-q3t"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="xmg-gj-fZq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i61-H3-bPO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xmg-gj-fZq" secondAttribute="bottom" constant="20" id="j0u-1C-E9b"/>
+                            <constraint firstItem="29h-Er-PU1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9jd-fm-NaN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="acy-3Q-3N9" secondAttribute="trailing" id="WPu-cq-P0O"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="29h-Er-PU1" secondAttribute="trailing" constant="20" id="bFf-JC-djJ"/>
+                            <constraint firstItem="acy-3Q-3N9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kcT-ge-NJL"/>
+                            <constraint firstItem="29h-Er-PU1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="vY0-YN-lMr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="acy-3Q-3N9" secondAttribute="bottom" id="vvF-fB-d7V"/>
+                            <constraint firstItem="acy-3Q-3N9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xBe-PU-a5d"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="4wh-J3-u3w"/>
+                    <navigationItem key="navigationItem" id="4wh-J3-u3w" colorLabel="IBBuiltInLabel-Orange"/>
                     <connections>
                         <outlet property="playButton" destination="tc0-4c-7Pk" id="0uh-5Z-fER"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="364" y="29.23538230884558"/>
+            <point key="canvasLocation" x="363.768115942029" y="28.794642857142854"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8Be-F1-NJi">
@@ -67,9 +86,9 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="t6p-XF-zv8" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="gnW-nj-khh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.91545593738555908" green="0.29308891296386719" blue="0.20751205086708069" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
@@ -85,8 +104,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="pause" width="25" height="25"/>
-        <image name="play" width="25" height="28"/>
-        <image name="stop" width="22" height="22"/>
+        <image name="nowPlayingBG" width="375" height="812"/>
+        <image name="pause" width="34" height="34"/>
+        <image name="play" width="34" height="34"/>
     </resources>
 </document>
