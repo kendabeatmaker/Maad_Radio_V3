@@ -68,7 +68,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "MAAD 97.5 FM"
-        player.radioURL = URL(string: "http://streaming.broadcastradio.com:8870/maad975fm")
+        player.radioURL = URL(string: "https://streaming.broadcastradio.com:8872/maad975fm")
 
         // Set the delegate for the radio player
         player.delegate = self
@@ -80,10 +80,23 @@ class ViewController: UIViewController {
         //infoContainer.isHidden = true
         
         setupRemoteTransportControls()
+       
+        //player.volume = 0.0
+        volumeSliderOutlet.value = player.volume ?? 0.2
     }
     
     @IBAction func volumeSlider(_ sender: UISlider) {
+      
+        
         player.volume = volumeSliderOutlet.value
+        
+        
+        //statusLabel.text = String(format: "%.1f", player.volume!)
+        
+        
+        
+        
+        
         
     }
     
