@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     // List of stations
     let stations = [Station(name: "Newport Folk Radio",
                             detail: "Are you ready to Folk?",
-                            url: URL(string: "http://rfcmedia.streamguys1.com/Newport.mp3")!,
+                            url: URL(string: "https://streaming.broadcastradio.com:8872/maad975fm")!,
                             image: #imageLiteral(resourceName: "station2")),
                     
                     Station(name: "Absolute Country Hits Radio",
