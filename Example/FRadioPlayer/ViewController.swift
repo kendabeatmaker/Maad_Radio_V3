@@ -72,15 +72,16 @@ class ViewController: UIViewController {
         player.delegate = self
         
         // Show current player state
-        statusLabel.text = player.state.description
+        //statusLabel.text = player.state.description
         
-        tableView.tableFooterView = UIView()
-        infoContainer.isHidden = true
+        //tableView.tableFooterView = UIView()
+        //infoContainer.isHidden = true
         
         setupRemoteTransportControls()
     }
     
     @IBAction func playTap(_ sender: Any) {
+        player.radioURL = URL(string: "https://streaming.broadcastradio.com:8872/maad975fm")
         player.togglePlaying()
     }
     
@@ -105,8 +106,8 @@ class ViewController: UIViewController {
     }
     
     func selectStation(at position: Int) {
-        player.radioURL = stations[selectedIndex].url
-        tableView.selectRow(at: IndexPath(item: position, section: 0), animated: true, scrollPosition: .none)
+        player.radioURL = URL(string: "https://streaming.broadcastradio.com:8872/maad975fm")
+        //tableView.selectRow(at: IndexPath(item: position, section: 0), animated: true, scrollPosition: .none)
     }
 }
 
@@ -115,7 +116,7 @@ class ViewController: UIViewController {
 extension ViewController: FRadioPlayerDelegate {
 
     func radioPlayer(_ player: FRadioPlayer, playerStateDidChange state: FRadioPlayerState) {
-        statusLabel.text = state.description
+        //statusLabel.text = state.description
     }
     
     func radioPlayer(_ player: FRadioPlayer, playbackStateDidChange state: FRadioPlaybackState) {
