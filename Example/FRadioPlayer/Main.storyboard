@@ -16,81 +16,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0bG-T0-61q">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xmg-gj-fZq">
+                                <rect key="frame" x="137.5" y="553" width="100" height="50"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Edl-F5-0tt">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xmg-gj-fZq">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cig-wx-WfW">
-                                                        <rect key="frame" x="0.0" y="286.5" width="50" height="50"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="50" id="qYu-kT-hih"/>
-                                                            <constraint firstAttribute="height" constant="50" id="rp2-Sv-9Ra"/>
-                                                        </constraints>
-                                                        <state key="normal" image="backward"/>
-                                                        <connections>
-                                                            <action selector="previousTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="imE-Qz-ejZ"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tc0-4c-7Pk">
-                                                        <rect key="frame" x="108.5" y="286.5" width="50" height="50"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="50" id="hsg-S4-ie6"/>
-                                                            <constraint firstAttribute="width" constant="50" id="xgd-d4-OZi"/>
-                                                        </constraints>
-                                                        <state key="normal" image="play"/>
-                                                        <state key="selected" image="pause"/>
-                                                        <connections>
-                                                            <action selector="playTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FsT-a6-CQl"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8w3-a4-Lpa">
-                                                        <rect key="frame" x="216.5" y="286.5" width="50" height="50"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="50" id="e9d-rd-39U"/>
-                                                            <constraint firstAttribute="height" constant="50" id="sD3-6j-xb5"/>
-                                                        </constraints>
-                                                        <state key="normal" image="stop"/>
-                                                        <connections>
-                                                            <action selector="stopTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oja-Rn-hiz"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPJ-Qn-7IO">
-                                                        <rect key="frame" x="325" y="286.5" width="50" height="50"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="50" id="WWJ-ls-WBv"/>
-                                                            <constraint firstAttribute="height" constant="50" id="nwE-FR-eCu"/>
-                                                        </constraints>
-                                                        <state key="normal" image="forward"/>
-                                                        <connections>
-                                                            <action selector="nextTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CXK-mR-1MT"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tc0-4c-7Pk">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <constraints>
-                                            <constraint firstItem="xmg-gj-fZq" firstAttribute="top" secondItem="Edl-F5-0tt" secondAttribute="top" id="DgG-gw-Nbh"/>
-                                            <constraint firstItem="xmg-gj-fZq" firstAttribute="leading" secondItem="Edl-F5-0tt" secondAttribute="leading" id="KBy-bb-X0P"/>
-                                            <constraint firstAttribute="bottom" secondItem="xmg-gj-fZq" secondAttribute="bottom" id="XAl-yt-Dfc"/>
-                                            <constraint firstAttribute="trailing" secondItem="xmg-gj-fZq" secondAttribute="trailing" id="bgw-ou-8Zw"/>
-                                            <constraint firstAttribute="height" constant="50" id="m58-WQ-YKR"/>
+                                            <constraint firstAttribute="height" constant="50" id="hsg-S4-ie6"/>
+                                            <constraint firstAttribute="width" constant="50" id="xgd-d4-OZi"/>
                                         </constraints>
-                                    </view>
+                                        <state key="normal" image="play"/>
+                                        <state key="selected" image="pause"/>
+                                        <connections>
+                                            <action selector="playTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FsT-a6-CQl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8w3-a4-Lpa">
+                                        <rect key="frame" x="50" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="e9d-rd-39U"/>
+                                            <constraint firstAttribute="height" constant="50" id="sD3-6j-xb5"/>
+                                        </constraints>
+                                        <state key="normal" image="stop"/>
+                                        <connections>
+                                            <action selector="stopTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oja-Rn-hiz"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="0bG-T0-61q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Lcv-zB-5ML"/>
-                            <constraint firstItem="0bG-T0-61q" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ZVB-fx-HC5"/>
-                            <constraint firstItem="0bG-T0-61q" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="fTZ-5l-zH3"/>
-                            <constraint firstItem="0bG-T0-61q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mbi-sz-XRJ"/>
+                            <constraint firstItem="xmg-gj-fZq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i61-H3-bPO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xmg-gj-fZq" secondAttribute="bottom" constant="20" id="j0u-1C-E9b"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -127,8 +85,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="backward" width="25" height="25"/>
-        <image name="forward" width="25" height="25"/>
         <image name="pause" width="25" height="25"/>
         <image name="play" width="25" height="28"/>
         <image name="stop" width="22" height="22"/>
