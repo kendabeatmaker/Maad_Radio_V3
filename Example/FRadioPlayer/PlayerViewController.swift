@@ -15,6 +15,7 @@ class PlayerViewController: UIViewController {
     @IBOutlet weak var artworkImageView: UIImageView!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var volumeSliderOutlet: UISlider!
+    let firstScreenVC = FirstScreenViewController()
     
     // Singleton ref to player
     let player: FRadioPlayer = FRadioPlayer.shared
@@ -75,10 +76,14 @@ class PlayerViewController: UIViewController {
         if player.isPlaying {
         
             playButton.setImage(stopImage, for: UIControl.State.normal)
+            statusLabel.text = "Radio Streaming"
+            
         } else {
             playButton.setImage(playImage, for: UIControl.State.normal)
+            statusLabel.text = "Radio Stream Stopped"
+            //firstScreenVC.gotoPlayerHidddenOutlet.setTitle("Stopped", for: UIControl.State.normal)
+
         }
-    
     }
     
 
