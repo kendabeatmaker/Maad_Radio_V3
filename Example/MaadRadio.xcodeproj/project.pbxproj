@@ -13,7 +13,9 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		9BF856856EA4557B0A5C5D6D /* Pods_FRadioPlayer_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF8AEAE2D18ED2C5F12FD1EF /* Pods_FRadioPlayer_Tests.framework */; };
-		CAE63D501FD4910000281653 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE63D4F1FD4910000281653 /* ViewController.swift */; };
+		C99A17AC2470822E0002E185 /* FirstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99A17AB2470822E0002E185 /* FirstScreenViewController.swift */; };
+		C99A17AE247085EF0002E185 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99A17AD247085EF0002E185 /* WebKit.framework */; };
+		CAE63D501FD4910000281653 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE63D4F1FD4910000281653 /* PlayerViewController.swift */; };
 		CAE63D521FD4912000281653 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAE63D511FD4912000281653 /* Main.storyboard */; };
 		CAE63D551FD4915300281653 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE63D531FD4915300281653 /* Station.swift */; };
 		CAE63D561FD4915300281653 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE63D541FD4915300281653 /* Track.swift */; };
@@ -39,7 +41,7 @@
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		607FACE51AFB9204008FA782 /* FRadioPlayer_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FRadioPlayer_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACE51AFB9204008FA782 /* MaadRadio_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MaadRadio_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		612EF1D0B96E8B922E04963F /* Pods-FRadioPlayer_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FRadioPlayer_ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-FRadioPlayer_ios/Pods-FRadioPlayer_ios.release.xcconfig"; sourceTree = "<group>"; };
@@ -50,7 +52,9 @@
 		ADC0D107E336293D60827BCD /* Pods-FRadioPlayer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FRadioPlayer_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FRadioPlayer_Tests/Pods-FRadioPlayer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B9443D8603AB2AE7F9D587B2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		BC2AE6470A4C0BE46711D9AF /* Pods-FRadioPlayer_mac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FRadioPlayer_mac.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FRadioPlayer_mac/Pods-FRadioPlayer_mac.debug.xcconfig"; sourceTree = "<group>"; };
-		CAE63D4F1FD4910000281653 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C99A17AB2470822E0002E185 /* FirstScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenViewController.swift; sourceTree = "<group>"; };
+		C99A17AD247085EF0002E185 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		CAE63D4F1FD4910000281653 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		CAE63D511FD4912000281653 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CAE63D531FD4915300281653 /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		CAE63D541FD4915300281653 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
@@ -67,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C99A17AE247085EF0002E185 /* WebKit.framework in Frameworks */,
 				4B90C8F720835A3CACB5692F /* Pods_FRadioPlayer_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,7 +92,7 @@
 			children = (
 				FAE5E45021AC74A3003F96DB /* Shared */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
-				607FACD21AFB9204008FA782 /* FRadioPlayer_ios */,
+				607FACD21AFB9204008FA782 /* MaadRadio_IOS */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				C9185C99D475B3E726EF3DE3 /* Pods */,
@@ -99,22 +104,23 @@
 			isa = PBXGroup;
 			children = (
 				607FACD01AFB9204008FA782 /* MAAD975Radio.app */,
-				607FACE51AFB9204008FA782 /* FRadioPlayer_Tests.xctest */,
+				607FACE51AFB9204008FA782 /* MaadRadio_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		607FACD21AFB9204008FA782 /* FRadioPlayer_ios */ = {
+		607FACD21AFB9204008FA782 /* MaadRadio_IOS */ = {
 			isa = PBXGroup;
 			children = (
-				CAE63D4F1FD4910000281653 /* ViewController.swift */,
+				CAE63D4F1FD4910000281653 /* PlayerViewController.swift */,
+				C99A17AB2470822E0002E185 /* FirstScreenViewController.swift */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				CAE63D511FD4912000281653 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
-			name = FRadioPlayer_ios;
+			name = MaadRadio_IOS;
 			path = FRadioPlayer;
 			sourceTree = "<group>";
 		};
@@ -156,6 +162,7 @@
 		9C8AF1F1615EA645852C39CC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C99A17AD247085EF0002E185 /* WebKit.framework */,
 				93384C18F68BA278DC1055A8 /* Pods_FRadioPlayer_Example.framework */,
 				CF8AEAE2D18ED2C5F12FD1EF /* Pods_FRadioPlayer_Tests.framework */,
 				EFC9F9BC32350C69D791241A /* Pods_FRadioPlayer_ios.framework */,
@@ -194,9 +201,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		607FACCF1AFB9204008FA782 /* FRadioPlayer_ios */ = {
+		607FACCF1AFB9204008FA782 /* MaadRadio_ios */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "FRadioPlayer_ios" */;
+			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "MaadRadio_ios" */;
 			buildPhases = (
 				4FB7D000255781F466D86BD3 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
@@ -208,14 +215,14 @@
 			);
 			dependencies = (
 			);
-			name = FRadioPlayer_ios;
+			name = MaadRadio_ios;
 			productName = FRadioPlayer;
 			productReference = 607FACD01AFB9204008FA782 /* MAAD975Radio.app */;
 			productType = "com.apple.product-type.application";
 		};
-		607FACE41AFB9204008FA782 /* FRadioPlayer_Tests */ = {
+		607FACE41AFB9204008FA782 /* MaadRadio_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "FRadioPlayer_Tests" */;
+			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "MaadRadio_Tests" */;
 			buildPhases = (
 				41D126F2EA5D97B25A017638 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
@@ -227,9 +234,9 @@
 			dependencies = (
 				607FACE71AFB9204008FA782 /* PBXTargetDependency */,
 			);
-			name = FRadioPlayer_Tests;
+			name = MaadRadio_Tests;
 			productName = Tests;
-			productReference = 607FACE51AFB9204008FA782 /* FRadioPlayer_Tests.xctest */;
+			productReference = 607FACE51AFB9204008FA782 /* MaadRadio_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -259,7 +266,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "FRadioPlayer" */;
+			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "MaadRadio" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -272,8 +279,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				607FACCF1AFB9204008FA782 /* FRadioPlayer_ios */,
-				607FACE41AFB9204008FA782 /* FRadioPlayer_Tests */,
+				607FACCF1AFB9204008FA782 /* MaadRadio_ios */,
+				607FACE41AFB9204008FA782 /* MaadRadio_Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -360,9 +367,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAE63D501FD4910000281653 /* ViewController.swift in Sources */,
+				CAE63D501FD4910000281653 /* PlayerViewController.swift in Sources */,
 				CAE63D551FD4915300281653 /* Station.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				C99A17AC2470822E0002E185 /* FirstScreenViewController.swift in Sources */,
 				CAE63D561FD4915300281653 /* Track.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,7 +388,7 @@
 /* Begin PBXTargetDependency section */
 		607FACE71AFB9204008FA782 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 607FACCF1AFB9204008FA782 /* FRadioPlayer_ios */;
+			target = 607FACCF1AFB9204008FA782 /* MaadRadio_ios */;
 			targetProxy = 607FACE61AFB9204008FA782 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -577,7 +585,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "FRadioPlayer" */ = {
+		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "MaadRadio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				607FACED1AFB9204008FA782 /* Debug */,
@@ -586,7 +594,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "FRadioPlayer_ios" */ = {
+		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "MaadRadio_ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				607FACF01AFB9204008FA782 /* Debug */,
@@ -595,7 +603,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "FRadioPlayer_Tests" */ = {
+		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "MaadRadio_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				607FACF31AFB9204008FA782 /* Debug */,

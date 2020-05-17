@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t6p-XF-zv8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="beo-oX-jdD">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -7,29 +7,29 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Player View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MAAD975Radio" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PlayerViewController" customModule="MAAD975Radio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nowPlayingBG-1" translatesAutoresizingMaskIntoConstraints="NO" id="acy-3Q-3N9">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="upc-YB-D1L">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Snj-uC-jvz">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="311"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="323"/>
                                         <subviews>
                                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="2OE-SC-Lqy" userLabel="topViewView">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="311"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="323"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="6xN-o3-wPC">
-                                                        <rect key="frame" x="-43" y="20" width="461" height="271"/>
+                                                        <rect key="frame" x="-43" y="20" width="461" height="283"/>
                                                     </imageView>
                                                 </subviews>
                                                 <constraints>
@@ -46,10 +46,10 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="N4a-bR-3M9">
-                                        <rect key="frame" x="0.0" y="312" width="375" height="311"/>
+                                        <rect key="frame" x="0.0" y="324" width="375" height="323"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yW2-hG-XcP" userLabel="MiddleView">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="155"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="161"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAAD 97.5 FM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Cv-mb-e6I">
                                                         <rect key="frame" x="82.5" y="5" width="210" height="38.5"/>
@@ -87,10 +87,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="29h-Er-PU1" userLabel="bottomView">
-                                                <rect key="frame" x="0.0" y="156" width="375" height="155"/>
+                                                <rect key="frame" x="0.0" y="162" width="375" height="161"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tc0-4c-7Pk">
-                                                        <rect key="frame" x="157.5" y="47.5" width="60" height="60"/>
+                                                        <rect key="frame" x="157.5" y="50.5" width="60" height="60"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="60" id="mZS-oS-65R"/>
                                                             <constraint firstAttribute="height" constant="60" id="v4k-aW-N9O"/>
@@ -143,10 +143,10 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="upc-YB-D1L" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8AS-Ga-HVo"/>
-                            <constraint firstItem="acy-3Q-3N9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FvA-kO-Qyu"/>
-                            <constraint firstItem="acy-3Q-3N9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Gam-jb-VAd"/>
-                            <constraint firstItem="acy-3Q-3N9" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Jlf-8e-Cg0"/>
-                            <constraint firstItem="acy-3Q-3N9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Nzo-HE-TWd"/>
+                            <constraint firstItem="acy-3Q-3N9" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="FvA-kO-Qyu"/>
+                            <constraint firstItem="acy-3Q-3N9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Gam-jb-VAd"/>
+                            <constraint firstItem="acy-3Q-3N9" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="Jlf-8e-Cg0"/>
+                            <constraint firstItem="acy-3Q-3N9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Nzo-HE-TWd"/>
                             <constraint firstItem="upc-YB-D1L" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ds1-27-mc9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="upc-YB-D1L" secondAttribute="bottom" id="fMD-9o-ojj"/>
                             <constraint firstItem="upc-YB-D1L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gap-EU-qOu"/>
@@ -180,18 +180,15 @@
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vuq-IA-C6r"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gyc-vt-eKf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-359" y="29"/>
         </scene>
-        <!--View Controller-->
+        <!--First Screen View Controller-->
         <scene sceneID="2rl-dr-6zR">
             <objects>
-                <viewController id="beo-oX-jdD" sceneMemberID="viewController">
+                <viewController id="beo-oX-jdD" customClass="FirstScreenViewController" customModule="MAAD975Radio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mCo-yn-GEY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -199,57 +196,121 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nowPlayingBG-1" translatesAutoresizingMaskIntoConstraints="NO" id="7XF-oh-O01">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="cet-dr-35Q">
-                                <rect key="frame" x="16" y="563" width="343" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YUt-yM-aNC">
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="evt-kT-jmH">
+                                        <rect key="frame" x="37.5" y="20" width="300" height="76.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAAD Social Media Links" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKo-d2-M4F">
+                                                <rect key="frame" x="43.5" y="0.0" width="213" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="hXV-Ef-Cfv">
+                                                <rect key="frame" x="0.0" y="28.5" width="300" height="48"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TjM-zP-Nf7">
+                                                        <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                                        <state key="normal" image="icons8_facebook"/>
+                                                        <connections>
+                                                            <action selector="facebookButton:" destination="beo-oX-jdD" eventType="touchUpInside" id="tKj-Pa-etl"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLK-Dp-pHi">
+                                                        <rect key="frame" x="63" y="0.0" width="48" height="48"/>
+                                                        <state key="normal" image="icons8_instagram"/>
+                                                        <connections>
+                                                            <action selector="igButton:" destination="beo-oX-jdD" eventType="touchUpInside" id="lsr-qZ-QyO"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xR7-bp-sxP">
+                                                        <rect key="frame" x="126" y="0.0" width="48" height="48"/>
+                                                        <state key="normal" image="icons8_whatsapp_8"/>
+                                                        <connections>
+                                                            <action selector="whatsappButton:" destination="beo-oX-jdD" eventType="touchUpInside" id="AXU-Im-Uxc"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQ8-tn-s1n">
+                                                        <rect key="frame" x="189" y="0.0" width="48" height="48"/>
+                                                        <state key="normal" image="icons8_twitter_squared_48px"/>
+                                                        <connections>
+                                                            <action selector="twitterButton:" destination="beo-oX-jdD" eventType="touchUpInside" id="Oag-Y8-PNS"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Oc-qJ-toR">
+                                                        <rect key="frame" x="252" y="0.0" width="48" height="48"/>
+                                                        <state key="normal" image="icons8_play_button_13"/>
+                                                        <connections>
+                                                            <action selector="youtubeButton:" destination="beo-oX-jdD" eventType="touchUpInside" id="8Z0-2D-teq"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="evt-kT-jmH" firstAttribute="top" secondItem="YUt-yM-aNC" secondAttribute="top" constant="20" id="BzV-6F-0yH"/>
+                                    <constraint firstItem="evt-kT-jmH" firstAttribute="centerX" secondItem="YUt-yM-aNC" secondAttribute="centerX" id="NRM-JE-IWO"/>
+                                    <constraint firstAttribute="height" constant="200" id="SEv-JL-krY"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="cet-dr-35Q">
+                                <rect key="frame" x="9" y="581" width="357" height="86"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MAAD 97.5 FM - NOW PLAYING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dc-K3-MXO">
-                                <rect key="frame" x="35" y="595" width="218" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pk-UZ-QVm">
-                                <rect key="frame" x="287" y="580" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="play"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xR7-bp-sxP">
-                                <rect key="frame" x="33" y="26" width="48" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="icons8_whatsapp_8"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TjM-zP-Nf7">
-                                <rect key="frame" x="94" y="26" width="48" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="icons8_facebook"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Oc-qJ-toR">
-                                <rect key="frame" x="158" y="26" width="48" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="icons8_play_button_13"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLK-Dp-pHi">
-                                <rect key="frame" x="224" y="26" width="48" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="icons8_instagram"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQ8-tn-s1n">
-                                <rect key="frame" x="294" y="26" width="48" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="icons8_twitter_squared_48px"/>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="Q11-G2-2Qe" userLabel="Now PlayingStack View">
+                                <rect key="frame" x="44" y="599" width="287" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FC8-rB-12e" userLabel="goToPlayerHiddenButton">
+                                        <rect key="frame" x="0.0" y="10" width="218" height="30"/>
+                                        <state key="normal" title="MAAD 97.5 FM - NOW PLAYING">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goToPlayerHiddenButton:" destination="beo-oX-jdD" eventType="touchUpInside" id="IcD-8d-upG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pk-UZ-QVm">
+                                        <rect key="frame" x="237" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="0qw-cZ-fFm"/>
+                                            <constraint firstAttribute="width" constant="50" id="u4R-je-g6p"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.97957509760000006" green="0.81129771470000001" blue="0.065203420819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button" image="gotoradio"/>
+                                        <connections>
+                                            <action selector="smallPlay:" destination="beo-oX-jdD" eventType="touchUpInside" id="fan-rW-Qnw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0rV-CM-cwd"/>
+                                    <constraint firstAttribute="width" constant="287" id="xcf-kw-lP8"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="iUX-nn-YqS" firstAttribute="bottom" secondItem="7XF-oh-O01" secondAttribute="bottom" id="LwV-p0-Q7J"/>
-                            <constraint firstItem="7XF-oh-O01" firstAttribute="leading" secondItem="iUX-nn-YqS" secondAttribute="leading" id="O11-mZ-dIv"/>
-                            <constraint firstItem="7XF-oh-O01" firstAttribute="top" secondItem="iUX-nn-YqS" secondAttribute="top" id="aCa-J8-TVb"/>
-                            <constraint firstItem="iUX-nn-YqS" firstAttribute="trailing" secondItem="7XF-oh-O01" secondAttribute="trailing" id="ifq-x6-94U"/>
+                            <constraint firstItem="YUt-yM-aNC" firstAttribute="trailing" secondItem="mCo-yn-GEY" secondAttribute="trailing" id="20J-PE-F4D"/>
+                            <constraint firstItem="iUX-nn-YqS" firstAttribute="bottom" secondItem="cet-dr-35Q" secondAttribute="bottom" id="2Q0-QJ-yla"/>
+                            <constraint firstAttribute="trailing" secondItem="7XF-oh-O01" secondAttribute="trailing" id="2li-ex-4D1"/>
+                            <constraint firstAttribute="bottom" secondItem="YUt-yM-aNC" secondAttribute="bottom" id="5Rg-l0-bnj"/>
+                            <constraint firstAttribute="bottom" secondItem="cet-dr-35Q" secondAttribute="bottom" id="62M-zC-PzC"/>
+                            <constraint firstAttribute="bottom" secondItem="Q11-G2-2Qe" secondAttribute="bottom" constant="18" id="6ti-OJ-Jbh"/>
+                            <constraint firstItem="Q11-G2-2Qe" firstAttribute="centerX" secondItem="mCo-yn-GEY" secondAttribute="centerX" id="EmM-pE-tfw"/>
+                            <constraint firstAttribute="bottom" secondItem="7XF-oh-O01" secondAttribute="bottom" id="QQl-fy-oXA"/>
+                            <constraint firstItem="cet-dr-35Q" firstAttribute="centerX" secondItem="mCo-yn-GEY" secondAttribute="centerX" id="WHP-mr-HEj"/>
+                            <constraint firstItem="7XF-oh-O01" firstAttribute="leading" secondItem="mCo-yn-GEY" secondAttribute="leading" id="end-Qv-Mjl"/>
+                            <constraint firstItem="7XF-oh-O01" firstAttribute="top" secondItem="mCo-yn-GEY" secondAttribute="top" id="kTv-RY-gaV"/>
+                            <constraint firstItem="YUt-yM-aNC" firstAttribute="leading" secondItem="mCo-yn-GEY" secondAttribute="leading" id="xoz-TU-uqO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iUX-nn-YqS"/>
                     </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="goToPlayer" id="fWV-cp-w0y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3P0-5L-pKI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -258,6 +319,7 @@
     </scenes>
     <resources>
         <image name="Rectangle" width="357" height="86"/>
+        <image name="gotoradio" width="100" height="100"/>
         <image name="icons8_facebook" width="48" height="48"/>
         <image name="icons8_instagram" width="48" height="48"/>
         <image name="icons8_play_button_13" width="48" height="48"/>
