@@ -51,39 +51,38 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yW2-hG-XcP" userLabel="MiddleView">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="161"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAAD 97.5 FM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Cv-mb-e6I">
-                                                        <rect key="frame" x="82.5" y="5" width="210" height="38.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IS WE OWN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EX0-bm-Y63">
-                                                        <rect key="frame" x="142.5" y="53.5" width="90" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <slider opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="T5s-AK-ZU1">
-                                                        <rect key="frame" x="45.5" y="94" width="284" height="41"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4H1-At-Z0t">
+                                                        <rect key="frame" x="67.5" y="37" width="240" height="87"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAAD 97.5 FM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Cv-mb-e6I">
+                                                                <rect key="frame" x="15" y="0.0" width="210" height="38.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <slider opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="T5s-AK-ZU1">
+                                                                <rect key="frame" x="-2" y="48.5" width="244" height="39.5"/>
+                                                                <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="38.5" id="4bX-ty-Mbn"/>
+                                                                    <constraint firstAttribute="width" constant="240" id="C57-ue-pLO"/>
+                                                                </constraints>
+                                                                <color key="minimumTrackTintColor" red="0.61450511220000004" green="0.14198878409999999" blue="0.11855889109999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="thumbTintColor" red="0.97957509760000006" green="0.81129771470000001" blue="0.065203420819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <connections>
+                                                                    <action selector="volumeSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="S1g-Mf-typ"/>
+                                                                </connections>
+                                                            </slider>
+                                                        </subviews>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="40" id="FxS-3X-PUo"/>
-                                                            <constraint firstAttribute="width" constant="280" id="hT1-hT-thR"/>
+                                                            <constraint firstItem="T5s-AK-ZU1" firstAttribute="centerX" secondItem="4H1-At-Z0t" secondAttribute="centerX" id="nC4-zg-TAI"/>
                                                         </constraints>
-                                                        <color key="minimumTrackTintColor" red="0.61450511220000004" green="0.14198878409999999" blue="0.11855889109999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <color key="thumbTintColor" red="0.97957509760000006" green="0.81129771470000001" blue="0.065203420819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <connections>
-                                                            <action selector="volumeSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="S1g-Mf-typ"/>
-                                                        </connections>
-                                                    </slider>
+                                                    </stackView>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="8Cv-mb-e6I" firstAttribute="top" secondItem="yW2-hG-XcP" secondAttribute="top" constant="5" id="1dL-Gb-V0K"/>
-                                                    <constraint firstItem="T5s-AK-ZU1" firstAttribute="centerX" secondItem="yW2-hG-XcP" secondAttribute="centerX" id="8Aa-eO-1LW"/>
-                                                    <constraint firstItem="8Cv-mb-e6I" firstAttribute="centerX" secondItem="yW2-hG-XcP" secondAttribute="centerX" id="g7n-pi-AmT"/>
-                                                    <constraint firstItem="EX0-bm-Y63" firstAttribute="top" secondItem="8Cv-mb-e6I" secondAttribute="bottom" constant="10" id="jaJ-be-KSw"/>
-                                                    <constraint firstItem="T5s-AK-ZU1" firstAttribute="top" secondItem="EX0-bm-Y63" secondAttribute="bottom" constant="20" id="kqE-F9-a4b"/>
-                                                    <constraint firstItem="EX0-bm-Y63" firstAttribute="centerX" secondItem="yW2-hG-XcP" secondAttribute="centerX" id="zf9-c3-PVf"/>
+                                                    <constraint firstItem="4H1-At-Z0t" firstAttribute="centerY" secondItem="yW2-hG-XcP" secondAttribute="centerY" id="5Ng-6w-F6I"/>
+                                                    <constraint firstItem="4H1-At-Z0t" firstAttribute="centerX" secondItem="yW2-hG-XcP" secondAttribute="centerX" id="DUx-gn-aO7"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="29h-Er-PU1" userLabel="bottomView">
@@ -102,14 +101,14 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Radio Playing..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bo7-1G-3wN">
-                                                        <rect key="frame" x="129" y="8" width="117" height="20.5"/>
+                                                        <rect key="frame" x="129" y="20" width="117" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="bo7-1G-3wN" firstAttribute="top" secondItem="29h-Er-PU1" secondAttribute="top" constant="8" id="IaU-zj-5rb"/>
+                                                    <constraint firstItem="tc0-4c-7Pk" firstAttribute="top" secondItem="bo7-1G-3wN" secondAttribute="bottom" constant="10" id="Ftb-tJ-dVL"/>
                                                     <constraint firstItem="tc0-4c-7Pk" firstAttribute="centerX" secondItem="29h-Er-PU1" secondAttribute="centerX" id="a54-20-MGF"/>
                                                     <constraint firstItem="tc0-4c-7Pk" firstAttribute="centerY" secondItem="29h-Er-PU1" secondAttribute="centerY" id="d6p-k9-XGE"/>
                                                     <constraint firstItem="bo7-1G-3wN" firstAttribute="centerX" secondItem="29h-Er-PU1" secondAttribute="centerX" id="jgc-xx-NjX"/>
