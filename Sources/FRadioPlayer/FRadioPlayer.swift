@@ -64,8 +64,8 @@ import AVFoundation
         case .urlNotSet: return "URL is not set"
         case .readyToPlay: return "Ready to play"
         case .loading: return "Loading"
-        case .loadingFinished: return "Radio Playing... Turn Up!"
-        case .error: return "Error - Restart App"
+        case .loadingFinished: return "Radio Playing"
+        case .error: return "Error - Restart App/no internet"
         }
     }
 }
