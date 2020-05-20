@@ -15,6 +15,8 @@
 		C93D64262472FEF8004E3B40 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C93D64252472FEF8004E3B40 /* Launch Screen.storyboard */; };
 		C99A17AC2470822E0002E185 /* FirstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99A17AB2470822E0002E185 /* FirstScreenViewController.swift */; };
 		C99A17AE247085EF0002E185 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99A17AD247085EF0002E185 /* WebKit.framework */; };
+		C9E7A7B82474A4860022F241 /* NetworkStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E7A7B72474A4860022F241 /* NetworkStuff.swift */; };
+		C9E7A7BA2474A6840022F241 /* FlickrscreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E7A7B92474A6840022F241 /* FlickrscreenViewController.swift */; };
 		CAE63D501FD4910000281653 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE63D4F1FD4910000281653 /* PlayerViewController.swift */; };
 		CAE63D521FD4912000281653 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAE63D511FD4912000281653 /* Main.storyboard */; };
 		CAE63D551FD4915300281653 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE63D531FD4915300281653 /* Station.swift */; };
@@ -54,6 +56,8 @@
 		C93D64252472FEF8004E3B40 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		C99A17AB2470822E0002E185 /* FirstScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenViewController.swift; sourceTree = "<group>"; };
 		C99A17AD247085EF0002E185 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		C9E7A7B72474A4860022F241 /* NetworkStuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStuff.swift; sourceTree = "<group>"; };
+		C9E7A7B92474A6840022F241 /* FlickrscreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrscreenViewController.swift; sourceTree = "<group>"; };
 		CAE63D4F1FD4910000281653 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		CAE63D511FD4912000281653 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CAE63D531FD4915300281653 /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
@@ -113,12 +117,14 @@
 			isa = PBXGroup;
 			children = (
 				CAE63D4F1FD4910000281653 /* PlayerViewController.swift */,
+				C9E7A7B92474A6840022F241 /* FlickrscreenViewController.swift */,
 				C99A17AB2470822E0002E185 /* FirstScreenViewController.swift */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				CAE63D511FD4912000281653 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				C93D64252472FEF8004E3B40 /* Launch Screen.storyboard */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				C9E7A7BB2474A8F90022F241 /* NetworkManager */,
 			);
 			name = MaadRadio_IOS;
 			path = FRadioPlayer;
@@ -187,6 +193,14 @@
 				257B5148ADFF316304B18077 /* Pods-FRadioPlayer_tvOS.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C9E7A7BB2474A8F90022F241 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				C9E7A7B72474A4860022F241 /* NetworkStuff.swift */,
+			);
+			name = NetworkManager;
 			sourceTree = "<group>";
 		};
 		FAE5E45021AC74A3003F96DB /* Shared */ = {
@@ -368,8 +382,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAE63D501FD4910000281653 /* PlayerViewController.swift in Sources */,
+				C9E7A7B82474A4860022F241 /* NetworkStuff.swift in Sources */,
 				CAE63D551FD4915300281653 /* Station.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				C9E7A7BA2474A6840022F241 /* FlickrscreenViewController.swift in Sources */,
 				C99A17AC2470822E0002E185 /* FirstScreenViewController.swift in Sources */,
 				CAE63D561FD4915300281653 /* Track.swift in Sources */,
 			);
