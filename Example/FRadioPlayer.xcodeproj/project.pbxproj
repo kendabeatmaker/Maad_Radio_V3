@@ -13,6 +13,8 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		9BF856856EA4557B0A5C5D6D /* Pods_FRadioPlayer_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF8AEAE2D18ED2C5F12FD1EF /* Pods_FRadioPlayer_Tests.framework */; };
 		C93D64262472FEF8004E3B40 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C93D64252472FEF8004E3B40 /* Launch Screen.storyboard */; };
+		C978406E2474EC78001F35AC /* FlickrData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C978406D2474EC78001F35AC /* FlickrData.swift */; };
+		C97840722474EEBD001F35AC /* FlickrConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97840712474EEBD001F35AC /* FlickrConstants.swift */; };
 		C99A17AC2470822E0002E185 /* FirstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99A17AB2470822E0002E185 /* FirstScreenViewController.swift */; };
 		C99A17AE247085EF0002E185 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99A17AD247085EF0002E185 /* WebKit.framework */; };
 		C9E7A7B82474A4860022F241 /* NetworkStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E7A7B72474A4860022F241 /* NetworkStuff.swift */; };
@@ -54,6 +56,8 @@
 		B9443D8603AB2AE7F9D587B2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		BC2AE6470A4C0BE46711D9AF /* Pods-FRadioPlayer_mac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FRadioPlayer_mac.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FRadioPlayer_mac/Pods-FRadioPlayer_mac.debug.xcconfig"; sourceTree = "<group>"; };
 		C93D64252472FEF8004E3B40 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		C978406D2474EC78001F35AC /* FlickrData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrData.swift; sourceTree = "<group>"; };
+		C97840712474EEBD001F35AC /* FlickrConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrConstants.swift; sourceTree = "<group>"; };
 		C99A17AB2470822E0002E185 /* FirstScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenViewController.swift; sourceTree = "<group>"; };
 		C99A17AD247085EF0002E185 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		C9E7A7B72474A4860022F241 /* NetworkStuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStuff.swift; sourceTree = "<group>"; };
@@ -198,7 +202,9 @@
 		C9E7A7BB2474A8F90022F241 /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
+				C97840712474EEBD001F35AC /* FlickrConstants.swift */,
 				C9E7A7B72474A4860022F241 /* NetworkStuff.swift */,
+				C978406D2474EC78001F35AC /* FlickrData.swift */,
 			);
 			name = NetworkManager;
 			sourceTree = "<group>";
@@ -382,9 +388,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAE63D501FD4910000281653 /* PlayerViewController.swift in Sources */,
+				C97840722474EEBD001F35AC /* FlickrConstants.swift in Sources */,
 				C9E7A7B82474A4860022F241 /* NetworkStuff.swift in Sources */,
 				CAE63D551FD4915300281653 /* Station.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				C978406E2474EC78001F35AC /* FlickrData.swift in Sources */,
 				C9E7A7BA2474A6840022F241 /* FlickrscreenViewController.swift in Sources */,
 				C99A17AC2470822E0002E185 /* FirstScreenViewController.swift in Sources */,
 				CAE63D561FD4915300281653 /* Track.swift in Sources */,
