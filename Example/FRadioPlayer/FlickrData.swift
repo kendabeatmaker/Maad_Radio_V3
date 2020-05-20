@@ -20,11 +20,11 @@ struct Photos: Decodable {
     let page: Int
     let pages: Int
     let perpage: Int
-    let photo: [FlickrPhoto]
+    let photo: [PhotoArray]
     let total: String
 }
 
-struct FlickrPhoto: Decodable {
+struct PhotoArray: Decodable {
     let farm : Int
     let id : String
     
@@ -43,5 +43,6 @@ struct FlickrPhoto: Decodable {
         
         return urlString
     }
+
     
 }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		9BF856856EA4557B0A5C5D6D /* Pods_FRadioPlayer_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF8AEAE2D18ED2C5F12FD1EF /* Pods_FRadioPlayer_Tests.framework */; };
 		C93D64262472FEF8004E3B40 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C93D64252472FEF8004E3B40 /* Launch Screen.storyboard */; };
+		C951EF13247518D800BFF269 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = C951EF12247518D800BFF269 /* SDWebImage */; };
+		C951EF15247518D800BFF269 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C951EF14247518D800BFF269 /* SDWebImageMapKit */; };
 		C978406E2474EC78001F35AC /* FlickrData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C978406D2474EC78001F35AC /* FlickrData.swift */; };
 		C97840722474EEBD001F35AC /* FlickrConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97840712474EEBD001F35AC /* FlickrConstants.swift */; };
 		C99A17AC2470822E0002E185 /* FirstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99A17AB2470822E0002E185 /* FirstScreenViewController.swift */; };
@@ -79,7 +81,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C951EF13247518D800BFF269 /* SDWebImage in Frameworks */,
 				C99A17AE247085EF0002E185 /* WebKit.framework in Frameworks */,
+				C951EF15247518D800BFF269 /* SDWebImageMapKit in Frameworks */,
 				4B90C8F720835A3CACB5692F /* Pods_FRadioPlayer_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,6 +240,10 @@
 			dependencies = (
 			);
 			name = FRadioPlayer_ios;
+			packageProductDependencies = (
+				C951EF12247518D800BFF269 /* SDWebImage */,
+				C951EF14247518D800BFF269 /* SDWebImageMapKit */,
+			);
 			productName = FRadioPlayer;
 			productReference = 607FACD01AFB9204008FA782 /* Maad Radio.app */;
 			productType = "com.apple.product-type.application";
@@ -295,6 +303,9 @@
 				Base,
 			);
 			mainGroup = 607FACC71AFB9204008FA782;
+			packageReferences = (
+				C951EF11247518D800BFF269 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -518,7 +529,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -531,7 +543,10 @@
 				DEVELOPMENT_TEAM = CUD223CAM9;
 				INFOPLIST_FILE = FRadioPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = KTAD.MAAD975Radio;
 				PRODUCT_NAME = "Maad Radio";
@@ -548,7 +563,10 @@
 				DEVELOPMENT_TEAM = CUD223CAM9;
 				INFOPLIST_FILE = FRadioPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = KTAD.MAAD975Radio;
 				PRODUCT_NAME = "Maad Radio";
@@ -571,7 +589,11 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -588,7 +610,11 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -626,6 +652,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C951EF11247518D800BFF269 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C951EF12247518D800BFF269 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C951EF11247518D800BFF269 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		C951EF14247518D800BFF269 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C951EF11247518D800BFF269 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 607FACC81AFB9204008FA782 /* Project object */;
 }

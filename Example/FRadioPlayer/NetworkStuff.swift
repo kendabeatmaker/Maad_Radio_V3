@@ -51,8 +51,8 @@ struct NetworkStuff {
         
         do {
             let decodedData = try decoder.decode(FlickrData.self, from: flickrData)
-        //let decodedData = try decoder.decode(FlickrData.self, from: flickrData) //decodedData gets the type
             
+            print(decodedData.photos.photo[1].imageURL)
             print(decodedData.photos.photo[1].title)
             
         } catch {
