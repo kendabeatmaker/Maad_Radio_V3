@@ -42,12 +42,12 @@ class FirstScreenViewController: UIViewController {
        
         imgView.contentMode = .scaleAspectFill
        
-        let imgURL = NSURL(string: "https://farm66.staticflickr.com/65535/49914793168_557943488b_z.jpg")
-
-
-        if let url = imgURL {
-            imgView.sd_setImage(with: url as URL, completed: nil)
-        }
+//        let imgURL = NSURL(string: NetworkStuff.urlArrayReturn[0])
+//
+//
+//        if let url = imgURL {
+//            imgView.sd_setImage(with: url as URL, completed: nil)
+//        }
       
        
     }
@@ -92,7 +92,13 @@ class FirstScreenViewController: UIViewController {
     
     @IBAction func updateimgview(_ sender: UIButton) {
         
-      
+      let imgURL = NSURL(string: NetworkStuff.urlArrayReturn[0])
+
+
+      if let url = imgURL {
+          imgView.sd_setImage(with: url as URL, completed: nil)
+      }
+        fslbl.text = NetworkStuff.urlArrayReturnTitle
         
     }
     

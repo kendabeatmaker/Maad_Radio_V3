@@ -17,7 +17,16 @@ struct NetworkStuff {
     
     let flickrURL = "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=d22e5c3e492984638d76072b6d5b1c2c&user_id=188522128%40N06&safe_search=1&per_page=100&format=json&nojsoncallback=1"
     
+    static var urlArrayReturn = [String]()
     
+    static var urlArrayReturnCount = Int()
+   static var urlArrayReturnTitle = String()
+    
+    func passURLs(fullUrlString: String) -> [String] {
+        var urlArray = [fullUrlString]
+        return urlArray
+        
+    }
     
     func performRequest() {
         
@@ -57,9 +66,13 @@ struct NetworkStuff {
             let decodedData = try decoder.decode(FlickrData.self, from: flickrData)
           
             for n in 0..<decodedData.photos.photo.count {
-            print(decodedData.photos.photo[n].imageURL)
-            print(decodedData.photos.photo[n].title)
+                
+                NetworkStuff.urlArrayReturn += passURLs(fullUrlString: decodedData.photos.photo[n].imageURL)
+//            print(decodedData.photos.photo[n].imageURL)
+//            print(decodedData.photos.photo[n].title)
             }
+            NetworkStuff.urlArrayReturnCount = decodedData.photos.photo.count
+            NetworkStuff.urlArrayReturnTitle = decodedData.photos.photo[0].title
             //photodata1 = decodedData.photos.photo[0].imageURL
             
             
