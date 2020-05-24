@@ -10,16 +10,45 @@ import UIKit
 import MediaPlayer
 import FRadioPlayer
 import WebKit
+import SDWebImage
+
 class FirstScreenViewController: UIViewController {
-    @IBOutlet weak var webView: WKWebView!
+  
+    var networkStuff = NetworkStuff()
+    var photoArrayLink = PhotoArray.self
+ 
+    
+    @IBOutlet weak var fslbl: UILabel!
+    @IBOutlet weak var imgView: UIImageView!
+
     @IBOutlet weak var gotoPlayerHidddenOutlet: UIButton!
+    
+    
+
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let player: FRadioPlayer = FRadioPlayer.shared
+        
          player.radioURL = URL(string: "https://streaming.broadcastradio.com:8872/maad975fm")
-        //player.play()
-        // Do any additional setup after loading the view.
+        
+        
+         networkStuff.performRequest()
+       
+        
+        
+       
+        imgView.contentMode = .scaleAspectFill
+       
+        let imgURL = NSURL(string: "https://farm66.staticflickr.com/65535/49914793168_557943488b_z.jpg")
+
+
+        if let url = imgURL {
+            imgView.sd_setImage(with: url as URL, completed: nil)
+        }
+      
        
     }
    
@@ -35,9 +64,6 @@ class FirstScreenViewController: UIViewController {
     
     @IBAction func whatsappButton(_ sender: UIButton) {
         
-        
-        
-        // Use your own website here
         guard let url = URL(string: "https://wa.me/5926547080") else { return }
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
@@ -62,6 +88,12 @@ class FirstScreenViewController: UIViewController {
     @IBAction func youtubeButton(_ sender: UIButton) {
         guard let url = URL(string: "https://www.youtube.com/c/MAAD97FMRadio") else { return }
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
+    
+    @IBAction func updateimgview(_ sender: UIButton) {
+        
+      
+        
     }
     
     

@@ -9,7 +9,7 @@
 import UIKit
 
 class FlickrscreenViewController: UIViewController {
-    var networkStuff = NetworkStuff()
+    
     
     
 
@@ -17,7 +17,7 @@ class FlickrscreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        networkStuff.performRequest()
+       
         
         
         
