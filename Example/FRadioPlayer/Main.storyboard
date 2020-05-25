@@ -272,7 +272,7 @@
                                 <rect key="frame" x="164.5" y="427" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="nDT-0H-SQl" kind="show" id="QnA-nO-OwF"/>
+                                    <segue destination="rK7-K7-YjU" kind="show" id="nMV-BL-An9"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cob-yr-cJM">
@@ -333,24 +333,6 @@
             </objects>
             <point key="canvasLocation" x="1360.8" y="26.53673163418291"/>
         </scene>
-        <!--MAAD GALLERY-->
-        <scene sceneID="9VS-aS-ngB">
-            <objects>
-                <viewController id="PuJ-OJ-mRY" customClass="FlickrscreenViewController" customModule="Maad_Radio" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="0cF-oK-Q8M">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="Tum-Og-WFy"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="MAAD GALLERY" id="Pkm-op-PvI">
-                        <barButtonItem key="backBarButtonItem" title=" " id="tFT-I4-bFL"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="96U-GA-DRZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1361" y="765"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="lcR-Fj-dmd">
             <objects>
@@ -374,41 +356,45 @@
             <point key="canvasLocation" x="421.60000000000002" y="26.53673163418291"/>
         </scene>
         <!--Table View Controller-->
-        <scene sceneID="HjP-Mf-TuA">
+        <scene sceneID="iiY-vo-t63">
             <objects>
-                <tableViewController id="nDT-0H-SQl" customClass="TableViewController" customModule="Maad_Radio" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8ky-GF-jQR">
+                <viewController id="rK7-K7-YjU" customClass="TableViewController" customModule="Maad_Radio" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ndc-uZ-csK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="R84-UY-A8u">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="mycell" rowHeight="140" id="Oln-Jy-N3v">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Oln-Jy-N3v" id="t3J-BK-wrh">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1xx-BN-S8N">
-                            <rect key="frame" x="0.0" y="99.5" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button"/>
-                            <connections>
-                                <action selector="btn:" destination="nDT-0H-SQl" eventType="touchUpInside" id="A5i-6g-Jhw"/>
-                            </connections>
-                        </button>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="6rM-BG-kLV">
-                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6rM-BG-kLV" id="RZG-AN-ts7">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="nDT-0H-SQl" id="Io4-Jb-eaP"/>
-                            <outlet property="delegate" destination="nDT-0H-SQl" id="hwN-Tm-uiJ"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="NYo-vb-jKT"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bcw-ru-Qk1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="R84-UY-A8u" firstAttribute="top" secondItem="ndc-uZ-csK" secondAttribute="top" id="4wn-tu-h5t"/>
+                            <constraint firstAttribute="trailing" secondItem="R84-UY-A8u" secondAttribute="trailing" id="5Tg-CR-Ztd"/>
+                            <constraint firstAttribute="bottom" secondItem="R84-UY-A8u" secondAttribute="bottom" id="G5u-Ax-PsG"/>
+                            <constraint firstItem="R84-UY-A8u" firstAttribute="leading" secondItem="ndc-uZ-csK" secondAttribute="leading" id="xzi-qZ-Avt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="orR-Zg-son"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZyG-pt-9Xa"/>
+                    <connections>
+                        <outlet property="tableView" destination="R84-UY-A8u" id="GBx-7y-k4M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BGI-y8-AtZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="444" y="764"/>
+            <point key="canvasLocation" x="429" y="715"/>
         </scene>
     </scenes>
     <resources>

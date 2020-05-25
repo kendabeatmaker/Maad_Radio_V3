@@ -1,47 +1,50 @@
 //
-//  ViewController.swift
-//  pics demo2
+//  TableViewController.swift
+//  FRadioPlayer_ios
 //
-//  Created by Ken Taylor on 24/05/2020.
-//  Copyright © 2020 Ken Taylor. All rights reserved.
+//  Created by Ken Taylor on 25/05/2020.
+//  Copyright © 2020 CocoaPods. All rights reserved.
 //
 
 import UIKit
+import SDWebImage
+class TableViewController: UIViewController {
 
-class TableViewController: UITableViewController {
+    @IBOutlet weak var tableView: UITableView!
     
-    let netWorkStuff = NetworkStuff()
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        //netWorkStuff.performRequest()
-        // Do any additional setup after loading the view.
-        print(NetworkStuff.urlArrayReturn)
-               
-               print(NetworkStuff.urlArrayReturnCount)
-       
-       
-       
+        tableView.delegate = self
+        tableView.dataSource = self
         
     }
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//
-//    }
-//
-//
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//
-//    }
-//
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//
-//    }
-    @IBAction func btn(_ sender: UIButton) {
-        
-         print(NetworkStuff.urlArrayReturn)
-        
-        print(NetworkStuff.urlArrayReturnCount)
-    }
+ 
+
 }
 
+extension TableViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return NetworkStuff.urlArrayReturnCount
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "mycell", for: indexPath)
+        
+       
+        //cell.imageView?.sd_setImage(with: NetworkStuff.urlArrayReturn[indexPath.row], completed: nil)
+        
+        cell.imageView?.sd_setImage(with: NetworkStuff.urlArrayReturn[indexPath.row], placeholderImage: #imageLiteral(resourceName: "placeholderImage"), options: .highPriority, completed: nil)
+        cell.textLabel?.text = NetworkStuff.urlArrayReturnTitle[indexPath.row]
+        return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("tapped row")
+    }
+    
+    
+    
+}

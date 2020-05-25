@@ -92,14 +92,19 @@ class FirstScreenViewController: UIViewController {
     
     @IBAction func updateimgview(_ sender: UIButton) {
         
-      let imgURL = NSURL(string: NetworkStuff.urlArrayReturn[0])
+      //let imgURL = NetworkStuff.urlArrayReturn[0]
 
 
-      if let url = imgURL {
-          imgView.sd_setImage(with: url as URL, completed: nil)
-      }
-        fslbl.text = NetworkStuff.urlArrayReturnTitle
+      
+          imgView.sd_setImage(with: NetworkStuff.urlArrayReturn[0], completed: nil)
+     
         
+        //fslbl.text = NetworkStuff.urlArrayReturnTitle
+        
+        for i in 0..<NetworkStuff.urlArrayReturnCount {
+        print(NetworkStuff.urlArrayReturnTitle[i])
+        print(NetworkStuff.urlArrayReturn[i])
+        }
     }
     
     
