@@ -15,6 +15,8 @@
 		C923190224760A980047C934 /* FlickrConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97840712474EEBD001F35AC /* FlickrConstants.swift */; };
 		C93D64262472FEF8004E3B40 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C93D64252472FEF8004E3B40 /* Launch Screen.storyboard */; };
 		C9474724247BA0A3008ED12C /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9474723247BA0A3008ED12C /* TableViewController.swift */; };
+		C9474728247BBE7B008ED12C /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9474726247BBE7B008ED12C /* CustomTableViewCell.swift */; };
+		C9474729247BBE7B008ED12C /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9474727247BBE7B008ED12C /* CustomTableViewCell.xib */; };
 		C951EF13247518D800BFF269 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = C951EF12247518D800BFF269 /* SDWebImage */; };
 		C951EF15247518D800BFF269 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C951EF14247518D800BFF269 /* SDWebImageMapKit */; };
 		C966FDF52475817D00D0231E /* PhotoArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966FDF42475817D00D0231E /* PhotoArray.swift */; };
@@ -60,6 +62,8 @@
 		BC2AE6470A4C0BE46711D9AF /* Pods-FRadioPlayer_mac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FRadioPlayer_mac.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FRadioPlayer_mac/Pods-FRadioPlayer_mac.debug.xcconfig"; sourceTree = "<group>"; };
 		C93D64252472FEF8004E3B40 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		C9474723247BA0A3008ED12C /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		C9474726247BBE7B008ED12C /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		C9474727247BBE7B008ED12C /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		C966FDF42475817D00D0231E /* PhotoArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoArray.swift; sourceTree = "<group>"; };
 		C978406D2474EC78001F35AC /* FlickrData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrData.swift; sourceTree = "<group>"; };
 		C97840712474EEBD001F35AC /* FlickrConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrConstants.swift; sourceTree = "<group>"; };
@@ -134,7 +138,7 @@
 				C93D64252472FEF8004E3B40 /* Launch Screen.storyboard */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 				C9E7A7BB2474A8F90022F241 /* NetworkManager */,
-				C9474723247BA0A3008ED12C /* TableViewController.swift */,
+				C9474725247BBD63008ED12C /* GalleryStuff */,
 			);
 			name = MaadRadio_IOS;
 			path = FRadioPlayer;
@@ -203,6 +207,16 @@
 				257B5148ADFF316304B18077 /* Pods-FRadioPlayer_tvOS.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C9474725247BBD63008ED12C /* GalleryStuff */ = {
+			isa = PBXGroup;
+			children = (
+				C9474723247BA0A3008ED12C /* TableViewController.swift */,
+				C9474726247BBE7B008ED12C /* CustomTableViewCell.swift */,
+				C9474727247BBE7B008ED12C /* CustomTableViewCell.xib */,
+			);
+			name = GalleryStuff;
 			sourceTree = "<group>";
 		};
 		C9E7A7BB2474A8F90022F241 /* NetworkManager */ = {
@@ -326,6 +340,7 @@
 			files = (
 				CAE63D521FD4912000281653 /* Main.storyboard in Resources */,
 				C93D64262472FEF8004E3B40 /* Launch Screen.storyboard in Resources */,
+				C9474729247BBE7B008ED12C /* CustomTableViewCell.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,6 +418,7 @@
 			files = (
 				C966FDF52475817D00D0231E /* PhotoArray.swift in Sources */,
 				CAE63D501FD4910000281653 /* PlayerViewController.swift in Sources */,
+				C9474728247BBE7B008ED12C /* CustomTableViewCell.swift in Sources */,
 				C9E7A7B82474A4860022F241 /* NetworkStuff.swift in Sources */,
 				C9474724247BA0A3008ED12C /* TableViewController.swift in Sources */,
 				CAE63D551FD4915300281653 /* Station.swift in Sources */,
