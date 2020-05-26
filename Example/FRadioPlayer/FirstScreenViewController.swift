@@ -13,45 +13,45 @@ import WebKit
 import SDWebImage
 
 class FirstScreenViewController: UIViewController {
-  
+    
     var networkStuff = NetworkStuff()
     var photoArrayLink = PhotoArray.self
- 
+    
     
     @IBOutlet weak var fslbl: UILabel!
     @IBOutlet weak var imgView: UIImageView!
-
+    
     @IBOutlet weak var gotoPlayerHidddenOutlet: UIButton!
     
     
-
-   
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let player: FRadioPlayer = FRadioPlayer.shared
         
-         player.radioURL = URL(string: "https://streaming.broadcastradio.com:8872/maad975fm")
+        player.radioURL = URL(string: "https://streaming.broadcastradio.com:8872/maad975fm")
         
         
-         networkStuff.performRequest()
-       
+        networkStuff.performRequest()
         
         
-       
+        
+        
         imgView.contentMode = .scaleAspectFill
-       
-//        let imgURL = NSURL(string: NetworkStuff.urlArrayReturn[0])
-//
-//
-//        if let url = imgURL {
-//            imgView.sd_setImage(with: url as URL, completed: nil)
-//        }
-      
-       
+        
+        //        let imgURL = NSURL(string: NetworkStuff.urlArrayReturn[0])
+        //
+        //
+        //        if let url = imgURL {
+        //            imgView.sd_setImage(with: url as URL, completed: nil)
+        //        }
+        
+        
     }
-   
+    
     @IBAction func goToPlayerHiddenButton(_ sender: UIButton) {
         performSegue(withIdentifier: "goToPlayer", sender: self)
         
@@ -92,24 +92,24 @@ class FirstScreenViewController: UIViewController {
     
     @IBAction func updateimgview(_ sender: UIButton) {
         
-      //let imgURL = NetworkStuff.urlArrayReturn[0]
-
-
-      
-          imgView.sd_setImage(with: NetworkStuff.urlArrayReturn[0], completed: nil)
-     
+        //let imgURL = NetworkStuff.urlArrayReturn[0]
+        networkStuff.performRequest()
+        
+        
+        imgView.sd_setImage(with: NetworkStuff.urlArrayReturn[0], completed: nil)
+        
         
         //fslbl.text = NetworkStuff.urlArrayReturnTitle
         
-        for i in 0..<NetworkStuff.urlArrayReturnCount {
-        print(NetworkStuff.urlArrayReturnTitle[i])
-        print(NetworkStuff.urlArrayReturn[i])
-        }
+        //        for i in 0..<NetworkStuff.urlArrayReturnCount {
+        //        print(NetworkStuff.urlArrayReturnTitle[i])
+        //        print(NetworkStuff.urlArrayReturn[i])
+        //        }
     }
     
     
     
     //Cannot use instance member 'weburl' within property initializer; property initializers run
-//before 'self' is available
+    //before 'self' is available
     
 }

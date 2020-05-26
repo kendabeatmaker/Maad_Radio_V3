@@ -9,14 +9,14 @@
 import UIKit
 import SDWebImage
 class TableViewController: UIViewController {
-
+let networkStuff = NetworkStuff()
     @IBOutlet weak var tableView: UITableView!
     
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+        networkStuff.performRequest()
         let nib = UINib(nibName: "CustomTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "CustomTableViewCell")
 

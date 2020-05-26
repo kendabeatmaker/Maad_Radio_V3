@@ -22,7 +22,7 @@ class FlickrConstants: NSObject {
     
     
     
-    static let imageURL = "https://farm%d.staticflickr.com/%@/%@_%@_\(FlickrConstants.size.url_q.value).jpg"
+    static let imageURL = "https://farm%d.staticflickr.com/%@/%@_%@_\(FlickrConstants.size.url_z.value).jpg"
     
   
     enum size: String {
