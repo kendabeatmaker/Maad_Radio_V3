@@ -11,27 +11,35 @@ import SDWebImage
 
 
 
-class ImageViewerViewController: UIViewController {
+class ImageViewerViewController: UIViewController, UIScrollViewDelegate {
     
-    @IBOutlet weak var scrollView: UIScrollView!
+    
     @IBOutlet weak var imageView: UIImageView!
-
+    
+    @IBOutlet weak var scrollV: UIScrollView!
+    
     @IBOutlet weak var label: UILabel!
     
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-   
         
         imageView.sd_setImage(with: PassData.url!, placeholderImage: #imageLiteral(resourceName: "placeholderImage"), options: .highPriority, completed: nil)
         label.text = PassData.photoCaption
         print(PassData.photoCaption)
-
-      
+       
+        
     }
     
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return imageView
+    }
     
-
-   
 }
+
+
+
+
+
+

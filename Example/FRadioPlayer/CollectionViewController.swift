@@ -49,7 +49,7 @@ class CollectionViewController: UIViewController {
     
     private func setupCollectionViewItemZize() {
         if collectionViewFlowLayout == nil {
-            let numberOfItemPerRow: CGFloat = 4
+            let numberOfItemPerRow: CGFloat = 3
             let lineSpacing: CGFloat = 5
             let interItemSpacing: CGFloat = 5
             let width = (collectionView.frame.width - (numberOfItemPerRow - 1) * interItemSpacing) / numberOfItemPerRow

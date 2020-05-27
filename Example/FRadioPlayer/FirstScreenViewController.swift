@@ -9,24 +9,15 @@
 import UIKit
 import MediaPlayer
 import FRadioPlayer
-import WebKit
 import SDWebImage
 
 class FirstScreenViewController: UIViewController {
     
     var networkStuff = NetworkStuff()
     var photoArrayLink = PhotoArray.self
-    
-    
-    @IBOutlet weak var fslbl: UILabel!
-    @IBOutlet weak var imgView: UIImageView!
-    
+
     @IBOutlet weak var gotoPlayerHidddenOutlet: UIButton!
-    
-    
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,20 +27,7 @@ class FirstScreenViewController: UIViewController {
         
         
         networkStuff.performRequest()
-        
-        
-        
-        
-        imgView.contentMode = .scaleAspectFill
-        
-        //        let imgURL = NSURL(string: NetworkStuff.urlArrayReturn[0])
-        //
-        //
-        //        if let url = imgURL {
-        //            imgView.sd_setImage(with: url as URL, completed: nil)
-        //        }
-        
-        
+           
     }
     
     @IBAction func goToPlayerHiddenButton(_ sender: UIButton) {
@@ -89,27 +67,5 @@ class FirstScreenViewController: UIViewController {
         guard let url = URL(string: "https://www.youtube.com/c/MAAD97FMRadio") else { return }
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
-    
-    @IBAction func updateimgview(_ sender: UIButton) {
-        
-        //let imgURL = NetworkStuff.urlArrayReturn[0]
-        networkStuff.performRequest()
-        
-        
-        imgView.sd_setImage(with: NetworkStuff.urlArrayReturn[0], completed: nil)
-        
-        
-        //fslbl.text = NetworkStuff.urlArrayReturnTitle
-        
-        //        for i in 0..<NetworkStuff.urlArrayReturnCount {
-        //        print(NetworkStuff.urlArrayReturnTitle[i])
-        //        print(NetworkStuff.urlArrayReturn[i])
-        //        }
-    }
-    
-    
-    
-    //Cannot use instance member 'weburl' within property initializer; property initializers run
-    //before 'self' is available
     
 }
