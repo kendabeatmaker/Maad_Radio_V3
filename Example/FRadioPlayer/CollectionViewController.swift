@@ -29,7 +29,7 @@ class CollectionViewController: UIViewController {
         networkStuff.performRequest()
     
         setupCollectionView()
-        collectionView.reloadData()
+        //collectionView.reloadData()
          print("reloaded")
         
     }

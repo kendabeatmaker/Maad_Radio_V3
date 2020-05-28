@@ -1,21 +1,12 @@
 use_frameworks!
 
 target 'FRadioPlayer_ios' do
-  platform :ios, '10.0'
-  pod 'FRadioPlayer', :path => '../'
+  platform :ios, '13.0'
+pod 'SDWebImage'
+pod 'FRadioPlayer'        
 
   target 'FRadioPlayer_Tests' do
-    inherit! :search_paths
+    #inherit! :search_paths
 
   end
-end
-
-target 'FRadioPlayer_mac' do
-  platform :osx, '10.12'
-  pod 'FRadioPlayer', :path => '../'
-end
-
-target 'FRadioPlayer_tvOS' do
-  platform :tvos, '10.0'
-  pod 'FRadioPlayer', :path => '../'
 end
