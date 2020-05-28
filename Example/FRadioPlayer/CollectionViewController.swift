@@ -9,6 +9,7 @@
 import UIKit
 import SDWebImage
 
+
 class CollectionViewController: UIViewController {
     let networkStuff = NetworkStuff()
     @IBOutlet weak var collectionView: UICollectionView!
@@ -17,27 +18,28 @@ class CollectionViewController: UIViewController {
     
     let cellIdentifier = "CustomCollectionViewCell"
     
+    var refresher:UIRefreshControl!
     
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+      
         networkStuff.performRequest()
+    
         setupCollectionView()
-        // collectionView.reloadData()
-
+        collectionView.reloadData()
+         print("reloaded")
+        
     }
+    
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         setupCollectionViewItemZize()
-       
+        
     }
-    
-
-    
-    
     
     private func setupCollectionView() {
         collectionView.delegate = self
@@ -49,14 +51,18 @@ class CollectionViewController: UIViewController {
     
     private func setupCollectionViewItemZize() {
         if collectionViewFlowLayout == nil {
-            let numberOfItemPerRow: CGFloat = 3
+            let numberOfItemPerRow: CGFloat = 4
             let lineSpacing: CGFloat = 5
             let interItemSpacing: CGFloat = 5
-            let width = (collectionView.frame.width - (numberOfItemPerRow - 1) * interItemSpacing) / numberOfItemPerRow
+            let containerWidth: CGFloat = self.view.bounds.width
+            let width = (containerWidth - (numberOfItemPerRow+1) * interItemSpacing) / numberOfItemPerRow //- 1
+            
+            let inset = max(interItemSpacing, floor( (containerWidth - (numberOfItemPerRow*width) - (numberOfItemPerRow-1)*interItemSpacing) / 2 ) )
+            //let width = (collectionView.frame.width - (numberOfItemPerRow - 1) * interItemSpacing) / numberOfItemPerRow
             let height = width
             
             collectionViewFlowLayout = UICollectionViewFlowLayout()
-            
+            collectionViewFlowLayout.sectionInset = UIEdgeInsets(top: interItemSpacing, left: inset, bottom: interItemSpacing, right: inset)
             collectionViewFlowLayout.itemSize = CGSize(width: width, height: height)
             collectionViewFlowLayout.sectionInset = .zero
             collectionViewFlowLayout.scrollDirection = .vertical
@@ -66,6 +72,8 @@ class CollectionViewController: UIViewController {
             
         }
     }
+    
+    
     
     
 }
@@ -85,10 +93,10 @@ extension CollectionViewController: UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(NetworkStuff.urlArrayReturn[indexPath.row])
-       let vc = storyboard?.instantiateViewController(identifier: "ImageViewerViewController") as? ImageViewerViewController
-      
+        let vc = storyboard?.instantiateViewController(identifier: "ImageViewerViewController") as? ImageViewerViewController
+        
         PassData.url = NetworkStuff.urlArrayReturn[indexPath.row]
-    
+        
         PassData.photoCaption = NetworkStuff.urlArrayReturnTitle[indexPath.row]
         //vc.imageView.sd_setImage(with: NetworkStuff.urlArrayReturn[indexPath.row], completed: nil)
         self.navigationController?.pushViewController(vc!, animated: true)
@@ -96,6 +104,8 @@ extension CollectionViewController: UICollectionViewDelegate, UICollectionViewDa
     
     
     
-
+    
+    
+    
     
 }

@@ -20,7 +20,7 @@ class FirstScreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
         let player: FRadioPlayer = FRadioPlayer.shared
         
         player.radioURL = URL(string: "https://streaming.broadcastradio.com:8872/maad975fm")
@@ -42,7 +42,7 @@ class FirstScreenViewController: UIViewController {
     
     @IBAction func whatsappButton(_ sender: UIButton) {
         
-        guard let url = URL(string: "https://wa.me/5926547080") else { return }
+        guard let url = URL(string: "https://wa.me/5926223975") else { return }
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
     @IBAction func facebookButton(_ sender: UIButton) {
@@ -68,4 +68,9 @@ class FirstScreenViewController: UIViewController {
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
     
+    @IBAction func gallery(_ sender: UIButton) {
+        networkStuff.performRequest()
+        
+        print("clickedddd")
+    }
 }
